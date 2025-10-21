@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Basic meta tags for character set and viewport responsiveness -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the webpage -->
     <title>Leon Template One</title>
-    <!-- Main Template CSS File -->
+    <!-- Link to the main custom stylesheet -->
     <link rel="stylesheet" href="CSS/leon.css" />
-    <!-- Render All Elements Normally-->
+    <!-- Link to Normalize.css to render all elements consistently across browsers -->
     <link rel="stylesheet" href="css/normalize.css" />
-    <!-- Font Awesome Library-->
+    <!-- Link to the Font Awesome library for icons -->
     <link rel="stylesheet" href="CSS/all.min.css" />
-    <!-- Google Fonts -->
+    <!-- Link to Google Fonts (Work Sans) for custom typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,16 +21,20 @@
     />
   </head>
   <body>
-    <!-- Start Header -->
+    <!-- Start Header Section -->
     <div class="header">
       <div class="container">
-        <img class="logo" src="images/logo.png" alt="" />
+        <!-- Logo Image -->
+        <img class="logo" src="images/logo.png" alt="Company Logo" />
+        <!-- Navigation Links Section -->
         <div class="links">
+          <!-- Hamburger Menu Icon -->
           <span class="icon">
             <span></span>
             <span></span>
             <span></span>
           </span>
+          <!-- Navigation Menu (hidden by default) -->
           <ul>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
@@ -38,18 +44,21 @@
         </div>
       </div>
     </div>
-    <!-- End Header -->
-    <!-- Start Landing -->
+    <!-- End Header Section -->
+
+    <!-- Start Landing Section -->
     <div class="landing">
       <div class="intro-text">
         <h1>Hello There</h1>
         <p>We are Leon - Super Creative & Minimal Agency Web Template</p>
       </div>
     </div>
-    <!-- End Landing -->
-    <!-- Start Features -->
-    <div class="features">
+    <!-- End Landing Section -->
+
+    <!-- Start Features Section -->
+    <div class="features" id="features">
       <div class="container">
+        <!-- Individual Feature Item -->
         <div class="feat">
           <i class="fas fa-magic fa-3x"></i>
           <h3>Tell Us Your Idea</h3>
@@ -60,6 +69,7 @@
             reprehenderit ratione sit minus eveniet.
           </p>
         </div>
+        <!-- Individual Feature Item -->
         <div class="feat">
           <i class="far fa-gem fa-3x"></i>
           <h3>We Will Do All The Work</h3>
@@ -68,6 +78,7 @@
             quasi.
           </p>
         </div>
+        <!-- Individual Feature Item -->
         <div class="feat">
           <i class="fas fa-globe-asia fa-3x"></i>
           <h3>Your Product is Worldwide</h3>
@@ -78,15 +89,19 @@
         </div>
       </div>
     </div>
-    <!-- End Features -->
-    <!-- Start Services -->
-    <div class="services">
+    <!-- End Features Section -->
+
+    <!-- Start Services Section -->
+    <div class="services" id="services">
       <div class="container">
-        <h2 class="special-heading">services</h2>
+        <!-- Special heading component for section titles -->
+        <h2 class="special-heading">Services</h2>
         <p>Don't be busy, be productive</p>
-        <div class="services-content">
+        <!-- Grid container for services content -->
+        <div class="services-content grid-3">
+          <!-- Column 1 for services -->
           <div class="col">
-            <!-- Start Service -->
+            <!-- Start Service Item -->
             <div class="srv">
               <i class="fas fa-palette fa-2x"></i>
               <div class="text">
@@ -98,8 +113,8 @@
                 </p>
               </div>
             </div>
-            <!-- End Service -->
-            <!-- Start Service -->
+            <!-- End Service Item -->
+            <!-- Start Service Item -->
             <div class="srv">
               <i class="fab fa-sketch fa-2x"></i>
               <div class="text">
@@ -111,10 +126,11 @@
                 </p>
               </div>
             </div>
-            <!-- End Service -->
+            <!-- End Service Item -->
           </div>
+          <!-- Column 2 for services -->
           <div class="col">
-            <!-- Start Service -->
+            <!-- Start Service Item -->
             <div class="srv">
               <i class="fas fa-vector-square fa-2x"></i>
               <div class="text">
@@ -125,8 +141,8 @@
                 </p>
               </div>
             </div>
-            <!-- End Service -->
-            <!-- Start Service -->
+            <!-- End Service Item -->
+            <!-- Start Service Item -->
             <div class="srv">
               <i class="fas fa-pencil-ruler fa-2x"></i>
               <div class="text">
@@ -137,17 +153,119 @@
                 </p>
               </div>
             </div>
-            <!-- End Service -->
+            <!-- End Service Item -->
           </div>
+          <!-- Column 3 for the image (hidden on smaller screens) -->
           <div class="col">
             <div class="image image-column">
-              <img src="images/services.jpg" alt="">
+              <img src="images/services.jpg" alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- End Services Section -->
 
-    <!-- End Services -->
+    <!-- Start Portfolio Section -->
+    <div class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="special-heading">Portfolio</h2>
+        <p>If you do it right, it will last forever.</p>
+        <!-- Grid container for portfolio items -->
+        <div class="portfolio-content grid-3">
+          <!-- Portfolio Card -->
+          <div class="card">
+            <img src="./images/portfolio-1.jpg" alt="Portfolio item 1" />
+            <div class="info">
+              <h3>Project Here</h3>
+              <p>
+                My creative ability is very difficult to measure because it can
+                manifest in so many surprising and.
+              </p>
+            </div>
+          </div>
+          <!-- Portfolio Card -->
+          <div class="card">
+            <img src="./images/portfolio-2.jpg" alt="Portfolio item 2" />
+            <div class="info">
+              <h3>Project Here</h3>
+              <p>
+                My creative ability is very difficult to measure because it can
+                manifest in so many surprising and.
+              </p>
+            </div>
+          </div>
+          <!-- Portfolio Card -->
+          <div class="card">
+            <img src="./images/portfolio-3.jpg" alt="Portfolio item 3" />
+            <div class="info">
+              <h3>Project Here</h3>
+              <p>
+                My creative ability is very difficult to measure because it can
+                manifest in so many surprising and.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Portfolio Section -->
+
+    <!-- Start About Section -->
+    <div class="about" id="about">
+      <div class="container">
+        <h2 class="special-heading">About</h2>
+        <p>Less is more work</p>
+        <div class="about-content">
+          <!-- Image container with decorative elements -->
+          <div class="image">
+            <img src="./images/about.jpg" alt="About us image" />
+          </div>
+          <!-- Text content for the About section -->
+          <div class="text">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
+              accusantium, numquam commodi ut ullam quo, laborum nesciunt eos
+              animi, incidunt modi voluptates odio! Nobis culpa assumenda error
+              quaerat iusto at.
+            </p>
+            <hr />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores sed officiis eveniet! Non vero eligendi, delectus saepe
+              ratione molestias repellat dolores esse. Sint perferendis quae cum
+              maiores, ullam consequuntur distinctio!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End About Section -->
+
+    <!-- Start Contact Section -->
+    <div class="contact" id="contact">
+      <div class="container">
+        <div class="special-heading">Contact</div>
+        <p>We are born to create</p>
+        <div class="info">
+          <p class="label">Feel free to drop us a line at:</p>
+          <a href="mailto:leonagency@mail.com?subject=Contact" class="link"
+            >leonagency@mail.com</a
+          >
+          <div class="social">
+            Find Us On Social Networks
+            <!-- Social media icons -->
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Contact Section -->
+
+    <!-- Start Footer Section -->
+    <div class="footer">&copy; 2025 <span>Leon</span> All Right Reserved</div>
+    <!-- End Footer Section -->
   </body>
 </html>
