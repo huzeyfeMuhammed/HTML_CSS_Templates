@@ -1,0 +1,165 @@
+/* Start Global Rules */
+/* Define CSS variables for consistent theming */
+:root {
+  --main-color: #19c8fa;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background-color: #f6f6f6;
+  --main-transition: 0.3s;
+}
+
+/* Apply border-box model to all elements for predictable sizing */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* Enable smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set the default font for the entire document */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Define a reusable container class for centered content with padding */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive container width for small screens (tablets) */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Responsive container width for medium screens (desktops) */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Responsive container width for large screens (large desktops) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* Start Header */
+header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 2;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 97px;
+}
+
+header .container::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 30px);
+  height: 1px;
+  bottom: 0;
+  left: 15px;
+  background-color: #a2a2a2;
+}
+
+header .container .logo img {
+  height: 40px;
+}
+
+header .container nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header .container nav .toggle-menu {
+  color: white;
+  font-size: 22px;
+}
+
+@media (min-width: 768px) {
+  header .container nav .toggle-menu {
+    display: none;
+  }
+}
+
+header .container nav ul {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  header .container nav ul {
+    display: none;
+  }
+  header .container .toggle-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    background-color: (0 0 0 / 50%);
+  }
+  header .container nav ul li a {
+    padding: 15px !important;
+  }
+}
+
+header .container nav ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: var(--main-transation);
+  font-size: 14px;
+  padding: 40px 10px;
+  position: relative;
+  z-index: 3;
+}
+
+header .container nav ul li a.active,
+header .container nav ul li a:hover {
+  color: var(--main-color);
+  border-bottom: solid 1px var(--main-color);
+}
+header .container nav .form {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-left: 30px;
+  border-left: white solid 1px;
+}
+
+header .container nav .form i {
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+/* End Header */
