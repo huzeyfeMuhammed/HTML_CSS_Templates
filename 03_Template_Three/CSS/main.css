@@ -912,7 +912,7 @@ a {
 
 .services .box {
   background-color: white;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 30%);
   position: relative;
   transition: var(--main-transition);
 }
@@ -947,7 +947,6 @@ a {
 
 .services .box h3 {
   color: var(--main-color);
-  text-transform: uppercase;
   position: relative;
   text-align: center;
   padding: 20px;
@@ -974,7 +973,7 @@ a {
   content: "0" counter(count);
   background-color: var(--main-color);
   left: -10px;
-  width: 85px;
+  width: 100px;
   color: white;
   font-weight: bold;
   display: flex;
@@ -985,14 +984,74 @@ a {
 
 .services .box .info::after {
   background-color: #d5d5d5;
-  width: 35px;
-  left: 60px;
+  width: 45px;
+  left: 70px;
   transform: skewX(-30deg);
 }
 
 .services .box .info a {
-
   color: var(--main-color);
 }
 
 /* End Services Section  */
+/* Start Skills Section */
+.our-skills {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+
+.our-skills .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+  .our-skills img {
+    display: none;
+  }
+}
+
+.our-skills .skills {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.our-skills .skills .skill {
+  display: flex;
+  flex-direction: column;
+}
+
+.our-skills .skills .skill h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 10px;
+}
+
+.our-skills .skills .skill h3 span {
+  color: var(--main-color);
+  border-radius: 4px;
+  border: solid 1px var(--border-color);
+  padding: 3px 5px;
+}
+
+.our-skills .skills .skill .the-progress {
+  height: 30px;
+  width: 100%;
+  background-color: #eeeeee;
+  position: relative;
+}
+
+.our-skills .skills .skill .the-progress span {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--main-color);
+  transition: width var(--main-transition) linear;
+  display: block;
+}
+
+
+/* End Skills Section */
