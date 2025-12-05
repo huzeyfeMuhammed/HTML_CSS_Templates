@@ -1399,7 +1399,7 @@ a {
   width: 100%;
 }
 
-@media (min-width: 1199px) {
+@media (min-width: 1200px) {
   .pricing .popular {
     transform: translateY(-20px);
   }
@@ -1493,3 +1493,80 @@ a {
   color: white;
 }
 /* End pricing Section */
+/* Start Videos Section */
+.videos {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-color: white;
+  font-size: 0.95rem;
+}
+
+.videos .holder {
+  display: flex;
+  border: solid 1px #e2e2e2;
+}
+
+@media (max-width: 991px) {
+  .videos .holder {
+    flex-direction: column;
+  }
+}
+
+.videos .holder .list {
+}
+
+.videos .holder .list .name {
+  background-color: #f4f4f4;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.videos .holder .list i {
+  text-align: end;
+}
+
+.videos .holder .list ul {
+}
+
+.videos .holder .list ul li {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--main-transition);
+}
+
+.videos .holder .list ul li:hover {
+  color: var(--main-color);
+  background-color: #fafafa;
+  z-index: -1;
+}
+
+.videos .holder .list ul li:not(:last-child) {
+  border-bottom: solid 1px #e2e2e2;
+}
+
+.videos .holder .list ul li span {
+  padding-top: 10px;
+  color: var(--p-color);
+}
+
+.videos .holder .preview {
+  background-color: #e2e2e2;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.videos .holder .preview img {
+  max-width: 100%;
+}
+.videos .holder .preview .info {
+  padding: 20px;
+  background-color: white;
+}
+
+/* End Videos Section */
