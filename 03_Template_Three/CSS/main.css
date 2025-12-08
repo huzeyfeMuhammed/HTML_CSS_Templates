@@ -523,7 +523,7 @@ a {
 .articles .box .content p {
   color: var(--p-color);
   font-size: 0.9rem;
-  line-height: 1.4;
+  line-height: 1.7;
 }
 
 .articles .box .info {
@@ -688,7 +688,7 @@ a {
 .features .box p {
   margin: 30px 0;
   padding: 25px;
-  line-height: 2;
+  line-height: 1.7;
   color: var(--p-color);
 }
 
@@ -808,7 +808,7 @@ a {
 
 .testimonials .box p {
   color: var(--p-color);
-  line-height: 1.6;
+  line-height: 1.7;
   text-align: justify;
   margin-bottom: 0;
 }
@@ -1168,7 +1168,7 @@ a {
 
 .work-steps .info .box p {
   text-align: justify;
-  line-height: 2;
+  line-height: 1.7;
   color: var(--p-color);
 }
 
@@ -1261,7 +1261,7 @@ a {
 
 .events .info p {
   text-align: center;
-  line-height: 2;
+  line-height: 1.7;
   color: var(--p-color);
   margin-bottom: 30px;
 }
@@ -1644,16 +1644,41 @@ a {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+.discount .content {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.discount .content h3 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  letter-spacing: -2px;
+  margin: 30px auto;
 }
 
 .discount .image {
+  background-image: url(../images/discount-background1.jpg);
   flex: 1;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   position: relative;
   color: white;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  animation: change-background 10s linear infinite;
+}
+
+@keyframes change-background {
+  0%,
+  100% {
+    background-image: url(../images/discount-background1.jpg);
+  }
+  50% {
+    background-image: url(../images/discount-background2.jpg);
+  }
 }
 
 .discount .image::before {
@@ -1667,25 +1692,15 @@ a {
   z-index: -1;
 }
 
-.discount .image .content {
-  padding: 0 20px;
-  text-align: center;
-}
-
-.discount .image .content h3 {
-  margin: 50px auto 0;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
 .discount .image .content p {
-  line-height: 1.8;
+  line-height: 1.7;
   margin: 30px auto;
   max-width: 500px;
 }
 
 .discount .image .content img {
-  width: 250px;
+  width: 300px;
+  max-width: 100%;
 }
 
 .discount .form {
@@ -1696,14 +1711,10 @@ a {
   padding-bottom: 50px;
 }
 
-.discount .form .content {
-}
-
-.discount .form .content h3 {
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin: 25px auto;
-  letter-spacing: -2px;
+@media (max-width: 991px) {
+  .discount .form {
+    flex-basis: 100%;
+  }
 }
 
 .discount .form .content form {
@@ -1725,6 +1736,7 @@ a {
 
 .discount .form .content form textarea {
   height: 200px;
+  resize: none;
 }
 
 .discount .form .content form input:last-child {
@@ -1733,6 +1745,11 @@ a {
   padding: 15px;
   border: none;
   font-weight: bold;
+  transition: var(--main-transition);
+}
+
+.discount .form .content form input:last-child:hover {
+  background-color: var(--main-color-alternatif);
 }
 /* End Discount Section */
 /* Start Fotter */
@@ -1844,31 +1861,62 @@ a {
   color: var(--main-color);
 }
 
-.footer .box:nth-of-type(3) {
+/* .footer .box:nth-of-type(3) {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.footer .box:nth-of-type(3) .line {
+.footer .line {
   display: flex;
   margin: 10px 0;
 }
 
-.footer .box:nth-of-type(3) .line i {
+.footer .line i {
   justify-items: center;
   font-size: 1.4rem;
   color: var(--main-color);
   margin: auto 10px;
 }
 
-.footer .box:nth-of-type(3) .line:last-child .info {
+.footer .line:last-child .info {
   display: flex;
   flex-direction: column;
 }
 
-.footer .box:nth-of-type(3) .line:last-child .info span {
+.footer .line:last-child .info span {
   margin-bottom: 10px;
+} */
+
+
+.footer .box .line {
+  display: flex;
+  align-items: center;
+  color: #b9b9b9;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .footer .box .line {
+    flex-direction: column;
+  }
+}
+.footer .box .line i {
+  font-size: 25px;
+  color: var(--main-color);
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .footer .box .line i {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+.footer .box .line .info {
+  line-height: 1.7;
+  flex: 1;
+}
+.footer .box .line .info span {
+  display: block;
 }
 
 .footer .footer-gallery {
