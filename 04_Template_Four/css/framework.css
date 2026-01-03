@@ -9,6 +9,10 @@
 /*end flex utilities*/
 
 /*start padding utilities*/
+.p-10 {
+  padding: 10px;
+}
+
 .p-20 {
   padding: 20px;
 }
@@ -63,7 +67,16 @@
   font-size: 14px;
 }
 
+/*end text utilities */
+
+/* start color utilities */
 .c-black {
   color: black;
 }
-/*end text utilities */
+  /* end color utilities */
+
+  @media (max-width: 767px) {
+    .hide-mobile {
+      display: none;
+    }
+  }
