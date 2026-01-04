@@ -1,12 +1,18 @@
 /* Define CSS variables for consistent theming */
 :root {
-  --main-color: #2196f3;
-  --main-color-alternatif: #1787e0;
-  --main-padding: 100px;
   --main-transition: 0.3s;
   --section-background: #ececec;
   --p-color: #777777;
-  --border-color: #e9e6e6;
+  --border-color: #ccc;
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+  --fa-family-classic: "Font Awesome 7 Free";
+  --fa-font-solid: normal 900 1em / 1 var(--fa-family-classic);
+  --fa-style-family-classic: var(--fa-family-classic);
 }
 /* Apply border-box model to all elements for predictable sizing */
 * {
@@ -29,6 +35,21 @@ body {
 ul {
   list-style: none;
   padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-alt-color);
 }
 
 a {
@@ -138,3 +159,92 @@ a {
   margin-left: 10px;
 }
 /* End Sidebar */
+
+/* Start Content */
+.content {
+  overflow: hidden;
+}
+
+.head .search::before {
+  position: absolute;
+  content: "\f002";
+  font-family: var(--fa-style-family-classic);
+  font-weight: 600;
+  font-size: 13px;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  margin-right: 10px;
+  color: var(--grey-color);
+}
+
+.head .search input {
+  padding-left: 30px;
+  margin-left: 5px;
+  border: 1px solid var(--border-color);
+  font-size: 14px;
+  width: 160px;
+  transition: width var(--main-transition);
+}
+
+.head .search input:focus {
+  width: 200px;
+}
+
+.head .search input:focus::placeholder {
+  opacity: 0;
+}
+
+.head .icons {
+}
+
+.head .icons .notification {
+  font-size: 20px;
+}
+
+.head .icons .notification::before {
+  position: absolute;
+  content: "";
+  background-color: var(--red-color);
+  width: 10px;
+  height: 10px;
+  right: 9px;
+  top: -5px;
+  border-radius: 50%;
+}
+
+.head .icons span {
+}
+
+.head .icons span i {
+  margin-right: 10px;
+}
+
+.head .icons img {
+  width: 32px;
+  height: 32px;
+}
+
+.page h1 {
+  margin: 20px 20px 40px;
+}
+
+.page h1::before,
+.page h1::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  bottom: -10px;
+  left: 0;
+}
+
+.page h1::before {
+  background-color: white;
+  width: 120px;
+}
+
+.page h1::after {
+  background-color: var(--grey-color);
+  width: 40px;
+}
+/* End Content */
