@@ -7,7 +7,6 @@
   --green-color: #22c55e;
   --red-color: #f44336;
   --grey-color: #888;
-
 }
 /*start flex utilities*/
 .d-flex {
@@ -17,6 +16,27 @@
 .align-center {
   align-items: center;
 }
+
+.d-grid {
+  display: grid;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .txt-c-mobile {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .block-mobile {
+    display: block;
+  }
+}
+
 /*end flex utilities*/
 
 /*start padding utilities*/
@@ -96,18 +116,18 @@
 .c-black {
   color: black;
 }
-  /* end color utilities */
+/* end color utilities */
 
-  @media (max-width: 767px) {
-    .hide-mobile {
-      display: none;
-    }
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none;
   }
+}
 
-  /* Start Components */
-  .between-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  /* End Components */
+/* Start Components */
+.between-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* End Components */
