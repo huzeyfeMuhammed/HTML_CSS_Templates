@@ -263,3 +263,57 @@ a {
     gap: 10px;
   }
 }
+
+/* Start Welcome Widget */
+.welcome {
+  overflow: hidden;
+}
+
+.welcome .intro img {
+  width: 200px;
+  margin-bottom: -10px;
+}
+
+.welcome img.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: 20px;
+  margin-top: -32px;
+  padding: 2px;
+  box-shadow: 0 0 5px #ddd;
+}
+
+.welcome .body {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.welcome .body > div {
+  flex: 1;
+}
+
+.welcome .visit {
+  margin: 0 15px 15px auto;
+  transition: var(--main-transition);
+}
+
+.welcome .visit:hover {
+  color: var(--blue-alt-color);
+}
+
+@media (max-width: 767px) {
+  .welcome .intro {
+    padding-bottom: 30px;
+  }
+
+  .welcome img.avatar {
+    margin-left: 0;
+  }
+
+  .welcome .body > div:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+/* End Welcome Widget */
