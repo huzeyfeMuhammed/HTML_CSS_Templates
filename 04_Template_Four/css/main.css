@@ -300,7 +300,7 @@ a {
 }
 
 .welcome .visit:hover {
-  color: var(--blue-alt-color);
+  background-color: var(--blue-alt-color);
 }
 
 @media (max-width: 767px) {
@@ -317,3 +317,20 @@ a {
   }
 }
 /* End Welcome Widget */
+
+/* Start Quick Draft Widget */
+
+.quick-draft textarea {
+  resize: none;
+  min-height: 180px;
+}
+
+.quick-draft .save {
+  margin-left: auto;
+  transition: var(--main-transition);
+}
+
+.quick-draft .save:hover {
+  background-color: var(--blue-alt-color);
+}
+/* End Quick Draft Widget */
