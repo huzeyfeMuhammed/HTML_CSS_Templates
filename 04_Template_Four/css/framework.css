@@ -107,6 +107,12 @@
 .bg-blue {
   background: var(--blue-color);
 }
+.bg-orange {
+  background: var(--orange-color);
+}
+.bg-green {
+  background: var(--green-color);
+}
 /*end background utilities*/
 
 /*start border utilities*/
@@ -142,6 +148,10 @@
   font-size: 15px;
 }
 
+.fw-bold {
+  font-weight: bold;
+}
+
 .w-full {
   width: 100%;
 }
@@ -164,6 +174,20 @@
 .c-white {
   color: white;
 }
+
+.c-blue {
+  color: var(--blue-color);
+}
+
+.c-orange {
+  color: var(--orange-color);
+}
+
+.c-green {
+  color: var(--green-color);
+}
+
+
 /* end color utilities */
 
 /* Start Components */
