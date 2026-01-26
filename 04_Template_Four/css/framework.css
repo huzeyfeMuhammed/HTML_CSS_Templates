@@ -29,6 +29,10 @@
   gap: 20px;
 }
 
+.f-wrap {
+flex-wrap: wrap;
+}
+
 @media (max-width: 767px) {
   .txt-c-mobile {
     text-align: center;
@@ -86,6 +90,10 @@
   margin-top: 20px;
 }
 
+.mb-5 {
+  margin-bottom: 5px;
+}
+
 .mb-10 {
   margin-bottom: 10px;
 }
@@ -107,9 +115,11 @@
 .bg-blue {
   background: var(--blue-color);
 }
+
 .bg-orange {
   background: var(--orange-color);
 }
+
 .bg-green {
   background: var(--green-color);
 }
@@ -140,12 +150,24 @@
   text-align: center;
 }
 
+.fs-13 {
+  font-size: 13px;
+}
+
 .fs-14 {
   font-size: 14px;
 }
 
 .fs-15 {
   font-size: 15px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-25 {
+  font-size: 25px;
 }
 
 .fw-bold {
@@ -185,6 +207,10 @@
 
 .c-green {
   color: var(--green-color);
+}
+
+.c-red {
+  color: var(--red-color);
 }
 
 
