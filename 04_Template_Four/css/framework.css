@@ -33,6 +33,10 @@
 flex-wrap: wrap;
 }
 
+.fg-1 {
+  flex-grow: 1;
+}
+
 @media (max-width: 767px) {
   .txt-c-mobile {
     text-align: center;
@@ -89,6 +93,13 @@ flex-wrap: wrap;
 .mt-20 {
   margin-top: 20px;
 }
+.ml-10 {
+  margin-left: 10px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
 
 .mb-5 {
   margin-bottom: 5px;
@@ -100,6 +111,14 @@ flex-wrap: wrap;
 
 .mb-20 {
   margin-bottom: 20px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mr-20 {
+  margin-right: 20px;
 }
 /*end margin utilities*/
 
@@ -160,6 +179,10 @@ flex-wrap: wrap;
 
 .fs-15 {
   font-size: 15px;
+}
+
+.fs-16 {
+  font-size: 16px;
 }
 
 .fs-18 {

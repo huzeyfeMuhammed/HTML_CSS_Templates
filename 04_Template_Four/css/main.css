@@ -390,7 +390,6 @@ a {
 }
 /* End Yearly Targets Widget */
 /* Start Ticket Widget */
-
 .tickets .box {
   border: solid 1px var(--grey-color);
   width: calc(50% - 10px);
@@ -401,5 +400,31 @@ a {
     width: 100%;
   }
 }
-
 /* End Ticket Widget */
+/* Start Latest News Widget */
+
+.latest-news .news-row:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.latest-news .news-row img {
+  width: 100px;
+}
+
+@media (max-width: 767px) {
+  .latest-news .news-row img {
+    margin-right: 0;
+  }
+
+  .latest-news .news-row .info p {
+    margin-bottom: 10px;
+  }
+
+  .latest-news .news-row .label {
+    margin: 10px auto;
+    width: fit-content;
+  }
+}
+/* End Latest News Widget */
