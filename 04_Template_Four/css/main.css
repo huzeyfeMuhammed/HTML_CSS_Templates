@@ -428,3 +428,31 @@ a {
   }
 }
 /* End Latest News Widget */
+/* Start Latest Tasks Widget */
+.tasks {
+}
+
+.tasks .delete {
+  transition: var(--main-transition);
+}
+
+.tasks .task-row {
+}
+
+.tasks .task-row:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tasks .delete:hover {
+  color: var(--orange-color);
+}
+
+.tasks .done {
+  opacity: 0.3;
+}
+
+.tasks .done h3,
+.tasks .done p {
+  text-decoration: line-through;
+}
+/* End Latest Tasks Widget */

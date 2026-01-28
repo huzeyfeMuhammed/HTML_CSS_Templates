@@ -30,7 +30,7 @@
 }
 
 .f-wrap {
-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .fg-1 {
@@ -71,6 +71,14 @@ flex-wrap: wrap;
 .pt-20 {
   padding-top: 20px;
 }
+
+.pb-10 {
+  padding-top: 10px;
+}
+
+.pb-20 {
+  padding-top: 20px;
+}
 /*end padding utilities*/
 
 /*start margin utilities*/
@@ -93,6 +101,7 @@ flex-wrap: wrap;
 .mt-20 {
   margin-top: 20px;
 }
+
 .ml-10 {
   margin-left: 10px;
 }
@@ -235,7 +244,6 @@ flex-wrap: wrap;
 .c-red {
   color: var(--red-color);
 }
-
 
 /* end color utilities */
 
