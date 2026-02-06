@@ -1,4 +1,6 @@
-/* Define CSS variables for consistent theming */
+/* ======================================================
+  CSS VARIABLES (Theme)
+====================================================== */
 :root {
   --main-transition: 0.3s;
   --blue-color: #0075ff;
@@ -7,81 +9,92 @@
   --green-color: #22c55e;
   --red-color: #f44336;
   --grey-color: #888;
+  --border-color: #ddd;
 }
-/*start flex utilities*/
+
+/* ======================================================
+  DISPLAY & LAYOUT UTILITIES
+====================================================== */
+/* Display */
 .d-flex {
   display: flex;
 }
-
-.align-center {
-  align-items: center;
-}
-
 .d-grid {
   display: grid;
 }
-
 .d-block {
   display: block;
 }
 
+/* Flex helpers */
+.align-center {
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.f-wrap {
+  flex-wrap: wrap;
+}
+.fg-1 {
+  flex-grow: 1;
+}
 .gap-20 {
   gap: 20px;
 }
 
-.f-wrap {
-  flex-wrap: wrap;
+/* Position */
+.p-relative {
+  position: relative;
 }
 
-.fg-1 {
-  flex-grow: 1;
-}
-
+/* ======================================================
+  RESPONSIVE UTILITIES
+====================================================== */
 @media (max-width: 767px) {
   .txt-c-mobile {
     text-align: center;
   }
-}
-
-@media (max-width: 767px) {
   .block-mobile {
     display: block;
   }
-
   .hide-mobile {
     display: none;
   }
 }
 
-/*end flex utilities*/
-
-/*start padding utilities*/
+/* ======================================================
+  SPACING UTILITIES
+====================================================== */
+/* Padding */
 .p-10 {
   padding: 10px;
 }
-
 .p-15 {
   padding: 15px;
 }
-
 .p-20 {
   padding: 20px;
 }
 
+.pt-15 {
+  padding-top: 15px;
+}
 .pt-20 {
   padding-top: 20px;
 }
 
 .pb-10 {
-  padding-top: 10px;
+  padding-bottom: 10px;
 }
-
+.pb-15 {
+  padding-bottom: 15px;
+}
 .pb-20 {
-  padding-top: 20px;
+  padding-bottom: 20px;
 }
-/*end padding utilities*/
 
-/*start margin utilities*/
+/* Margin */
 .m-20 {
   margin: 20px;
 }
@@ -89,91 +102,66 @@
 .mt-0 {
   margin-top: 0;
 }
-
 .mt-5 {
   margin-top: 5px;
 }
-
 .mt-10 {
   margin-top: 10px;
 }
-
 .mt-20 {
   margin-top: 20px;
-}
-
-.ml-10 {
-  margin-left: 10px;
-}
-
-.ml-20 {
-  margin-left: 20px;
 }
 
 .mb-5 {
   margin-bottom: 5px;
 }
-
 .mb-10 {
   margin-bottom: 10px;
 }
-
 .mb-20 {
   margin-bottom: 20px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+.ml-20 {
+  margin-left: 20px;
 }
 
 .mr-10 {
   margin-right: 10px;
 }
-
 .mr-20 {
   margin-right: 20px;
 }
-/*end margin utilities*/
 
-/*start background utilities*/
-.bg-eee {
-  background-color: #eee;
+/* ======================================================
+  SIZE UTILITIES
+====================================================== */
+.w-full {
+  width: 100%;
+}
+.w-fit {
+  width: fit-content;
 }
 
-.bg-white {
-  background-color: white;
+.w-30 {
+  width: 30px;
+}
+.w-40 {
+  width: 40px;
+}
+.w-50 {
+  width: 50px;
+}
+.w-100 {
+  width: 100px;
 }
 
-.bg-blue {
-  background: var(--blue-color);
-}
-
-.bg-orange {
-  background: var(--orange-color);
-}
-
-.bg-green {
-  background: var(--green-color);
-}
-/*end background utilities*/
-
-/*start border utilities*/
-.rad-6 {
-  border-radius: 6px;
-}
-
-.rad-10 {
-  border-radius: 10px;
-}
-
-.b-none {
-  border: none;
-}
-/*end border utilities*/
-
-/*start position utilities*/
-.p-relative {
-  position: relative;
-}
-/*end position utilities*/
-
-/*start text utilities*/
+/* ======================================================
+  TYPOGRAPHY
+====================================================== */
 .txt-c {
   text-align: center;
 }
@@ -181,23 +169,18 @@
 .fs-13 {
   font-size: 13px;
 }
-
 .fs-14 {
   font-size: 14px;
 }
-
 .fs-15 {
   font-size: 15px;
 }
-
 .fs-16 {
   font-size: 16px;
 }
-
 .fs-18 {
   font-size: 18px;
 }
-
 .fs-25 {
   font-size: 25px;
 }
@@ -206,48 +189,69 @@
   font-weight: bold;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-fit {
-  width: fit-content;
-}
-
-/*end text utilities */
-
-/* start color utilities */
+/* ======================================================
+  COLORS
+====================================================== */
+/* Text colors */
 .c-black {
   color: black;
 }
-
 .c-grey {
   color: var(--grey-color);
 }
-
 .c-white {
   color: white;
 }
-
 .c-blue {
   color: var(--blue-color);
 }
-
 .c-orange {
   color: var(--orange-color);
 }
-
 .c-green {
   color: var(--green-color);
 }
-
 .c-red {
   color: var(--red-color);
 }
 
-/* end color utilities */
+/* Backgrounds */
+.bg-white {
+  background-color: white;
+}
+.bg-eee {
+  background-color: #eee;
+}
+.bg-blue {
+  background-color: var(--blue-color);
+}
+.bg-orange {
+  background-color: var(--orange-color);
+}
+.bg-green {
+  background-color: var(--green-color);
+}
 
-/* Start Components */
+/* ======================================================
+  BORDERS
+====================================================== */
+.rad-6 {
+  border-radius: 6px;
+}
+.rad-10 {
+  border-radius: 10px;
+}
+
+.b-none {
+  border: none;
+}
+.bb-solid {
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* ======================================================
+  COMPONENTS
+====================================================== */
 .between-flex {
   display: flex;
   align-items: center;
@@ -260,13 +264,9 @@
   justify-content: center;
 }
 
-.space-between {
-  justify-content: space-between;
-}
-
 .btn-shape {
-  border-radius: 6px;
   padding: 4px 10px;
+  border-radius: 6px;
 }
 
 .dash-widget {
@@ -277,13 +277,12 @@
 
 .dash-widget > h2:first-of-type {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .dash-widget > p:first-of-type {
   margin-top: 0;
   margin-bottom: 20px;
-  color: var(--grey-color);
   font-size: 15px;
+  color: var(--grey-color);
 }
-/* End Components */

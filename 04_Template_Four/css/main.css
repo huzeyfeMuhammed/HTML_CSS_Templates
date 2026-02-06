@@ -244,6 +244,7 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   margin-left: 20px;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 767px) {
@@ -456,3 +457,8 @@ a {
   text-decoration: line-through;
 }
 /* End Latest Tasks Widget */
+/* Start Latest Uploads */
+.latest-uploads ul li:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+/* End Latest Uploads */
