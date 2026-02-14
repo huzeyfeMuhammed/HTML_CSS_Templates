@@ -462,3 +462,59 @@ a {
   border-bottom: 1px solid var(--border-color);
 }
 /* End Latest Uploads */
+
+.last-project img {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.2;
+}
+
+.last-project .project:not(:last-of-type):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--blue-color);
+  outline: 2px solid var(--blue-color);
+  border: 2px solid white;
+}
+.last-project .project::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  outline: 2px solid var(--blue-color);
+  border: 2px solid white;
+}
+
+.last-project .project:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: -30px;
+  width: 3px;
+  height: 22px;
+  background-color: var(--blue-color);
+}
+
+.last-project .test::before {
+  animation: point 2s infinite;
+}
+
+@keyframes point {
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: var(--blue-color);
+  }
+}
