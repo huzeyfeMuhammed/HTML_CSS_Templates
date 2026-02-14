@@ -471,19 +471,17 @@ a {
   opacity: 0.2;
 }
 
-.last-project .project:not(:last-of-type):before {
+.last-project .project::after {
   content: "";
   position: absolute;
   top: 0;
-  left: -40px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  left: 10px;
+  width: 3px;
+  height: 100%;
   background-color: var(--blue-color);
-  outline: 2px solid var(--blue-color);
-  border: 2px solid white;
 }
-.last-project .project::before {
+
+.last-project .project div::before {
   content: "";
   position: absolute;
   top: 0;
@@ -494,20 +492,16 @@ a {
   background-color: white;
   outline: 2px solid var(--blue-color);
   border: 2px solid white;
+  z-index: 1;
 }
 
-.last-project .project:not(:last-of-type)::after {
-  content: "";
-  position: absolute;
-  top: 25px;
-  left: -30px;
-  width: 3px;
-  height: 22px;
+.last-project .project .done::before {
   background-color: var(--blue-color);
+  border-color: var(--blue-color);
 }
 
-.last-project .test::before {
-  animation: point 2s infinite;
+.last-project .project .curent::before {
+  animation: point 1s infinite alternate;
 }
 
 @keyframes point {
