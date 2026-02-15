@@ -462,6 +462,7 @@ a {
   border-bottom: 1px solid var(--border-color);
 }
 /* End Latest Uploads */
+/* Start Last Project */
 
 .last-project img {
   width: 150px;
@@ -497,7 +498,6 @@ a {
 
 .last-project .project .done::before {
   background-color: var(--blue-color);
-  border-color: var(--blue-color);
 }
 
 .last-project .project .curent::before {
@@ -512,3 +512,45 @@ a {
     background-color: var(--blue-color);
   }
 }
+/* End Last Project */
+/* Start Reminders */
+.reminders ul li div::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  top: 50%;
+  left: 0;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.reminders ul li div::after {
+    position: absolute;
+  content: "";
+  height: 100%;
+  width: 2px;
+  top: 0;
+  left: 15px;
+  margin-left: 20px;
+}
+
+.reminders ul li .red::before,
+.reminders ul li .red::after {
+  background-color: var(--red-color);
+}
+
+.reminders ul .green::before,
+.reminders ul .green::after {
+  background-color: var(--green-color);
+}
+.reminders ul .orange::before,
+.reminders ul .orange::after {
+  background-color: var(--orange-color);
+}
+.reminders ul .blue::before,
+.reminders ul .blue::after {
+  background-color: var(--blue-color);
+}
+
+/* End  Reminders */
