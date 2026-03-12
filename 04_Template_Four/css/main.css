@@ -526,7 +526,7 @@ a {
 }
 
 .reminders ul li div::after {
-    position: absolute;
+  position: absolute;
   content: "";
   height: 100%;
   width: 2px;
@@ -552,5 +552,119 @@ a {
 .reminders ul .blue::after {
   background-color: var(--blue-color);
 }
-
 /* End  Reminders */
+/* Start Latest Post */
+.latest-posts .post {
+  line-height: 1.8;
+  text-transform: capitalize;
+  min-height: 100px;
+}
+/* End Latest Post */
+/* End Social Media */
+.social-media .box {
+  padding-left: 70px;
+}
+
+.social-media .box i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 52px;
+  transition: var(--main-transition);
+  align-items: center;
+  display: flex;
+}
+
+.social-media .box i:hover {
+  transform: rotate(5deg);
+}
+
+.social-media .twitter {
+  color: #1da1f2;
+  background-color: rgb(19 161 242 / 20%);
+}
+
+.social-media .twitter i,
+.social-media .twitter a {
+  background-color: #1da1f2;
+}
+
+.social-media .facebook {
+  color: #1877f2;
+  background-color: rgb(24 118 242 / 20%);
+}
+
+.social-media .facebook i,
+.social-media .facebook a {
+  background-color: #1877f2;
+}
+
+.social-media .youtube {
+  color: #ff0000;
+  background-color: rgb(255 0 0 / 20%);
+}
+
+.social-media .youtube i,
+.social-media .youtube a {
+  background-color: #ff0000;
+}
+
+.social-media .linkedin {
+  color: #0a66c2;
+  background-color: rgb(10 102 194 / 20%);
+}
+
+.social-media .linkedin i,
+.social-media .linkedin a {
+  background-color: #0a66c2;
+}
+
+/* End Social Media */
+/* Start Projects Table */
+
+.projects .responsive-table {
+  overflow-x: auto;
+}
+.projects .responsive-table table {
+  min-width: 1000px;
+  border-spacing: 0;
+}
+
+.projects .responsive-table table img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: white 2px solid;
+}
+
+.projects .responsive-table table img:not(:first-of-type) {
+  margin-left: -20px;
+}
+
+.projects .responsive-table table td {
+  padding: 15px;
+  transition: var(--main-transition);
+}
+
+.projects .responsive-table table thead {
+  background-color: #eee;
+  font-weight: bold;
+}
+
+.projects .responsive-table table tbody td {
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+}
+.projects .responsive-table table tbody tr td:last-child {
+  border-right: 1px solid #eee;
+}
+
+.projects .responsive-table table tbody tr:hover td {
+  background-color: #faf7f7;
+}
+
+.projects .responsive-table table .label {
+  font-size: 13px;
+}
+
+/* End Projects Table */
