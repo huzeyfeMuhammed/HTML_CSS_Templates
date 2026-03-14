@@ -669,6 +669,25 @@ a {
 
 /* End Projects Table */
 /* Start Sittings */
+.sittings-page {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+@media (max-width: 767px) {
+  .sittings-page {
+    grid-template-columns: minmax(100px, 1fr);
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.sittings-page .close-massage {
+  border: 1px solid #ccc;
+  resize: none;
+  min-height: 150px;
+}
+
 .toggle-checkbox {
   -webkit-appearance: none;
   appearance: none;
@@ -710,6 +729,5 @@ a {
   content: "\f00c";
   color: var(--blue-color);
   left: 50px;
-  
 }
 /* End Sittings */
