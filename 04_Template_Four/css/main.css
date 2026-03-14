@@ -668,3 +668,48 @@ a {
 }
 
 /* End Projects Table */
+/* Start Sittings */
+.toggle-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.toggle-switch {
+  background-color: #ccc;
+  height: 32px;
+  width: 80px;
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.toggle-switch::before {
+  position: absolute;
+  font-family: var(--fa-style-family-classic);
+  content: "\f00d";
+  top: 4px;
+  left: 4px;
+  height: 24px;
+  width: 24px;
+  font-weight: 900;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  transition: var(--main-transition);
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+
+.toggle-checkbox:checked + .toggle-switch::before {
+  content: "\f00c";
+  color: var(--blue-color);
+  left: 50px;
+  
+}
+/* End Sittings */
