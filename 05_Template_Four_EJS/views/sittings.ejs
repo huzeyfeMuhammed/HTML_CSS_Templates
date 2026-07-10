@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include('partials/head', { title: 'Sittings' }) %>
+  </head>
+  <body>
+    <div class="page d-flex">
+      <%- include('partials/sidebar', { page: 'sittings' }) %>
+      <div class="content w-full">
+        <%- include('partials/header') %>
+        <h1 class="p-relative">Sittings</h1>
+        <div class="sittings-page m-20 d-grid gap-20">
+          <div class="dash-widget">
+            <h2>Site Control</h2>
+            <p>Control The Website If There Is Maintenance</p>
+            <div class="between-flex mb-15">
+              <div>
+                <span>Website Control </span>
+                <p class="c-grey fs-13 mt-5 mb-0">
+                  Open/Close Website And Type The Reason
+                </p>
+              </div>
+              <div>
+                <label>
+                  <input class="toggle-checkbox" type="checkbox" checked />
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
+            </div>
+            <textarea
+              class="close-massage d-block p-10 rad-6 w-full"
+              placeholder="Close Massage Contenet"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "html_css_templates",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huzeyfeMuhammed/HTML_CSS_Templates.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huzeyfeMuhammed/HTML_CSS_Templates/issues"
+  },
+  "homepage": "https://github.com/huzeyfeMuhammed/HTML_CSS_Templates#readme",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}
