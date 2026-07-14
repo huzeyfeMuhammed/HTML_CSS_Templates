@@ -500,7 +500,7 @@ a {
   background-color: var(--blue-color);
 }
 
-.last-project .project .curent::before {
+.last-project .project .current::before {
   animation: point 1s infinite alternate;
 }
 
@@ -688,6 +688,11 @@ a {
   min-height: 150px;
 }
 
+.sittings-page .email {
+display: inline-flex;
+width: calc(100% - 80px);
+}
+
 .toggle-checkbox {
   -webkit-appearance: none;
   appearance: none;
@@ -730,4 +735,6 @@ a {
   color: var(--blue-color);
   left: 50px;
 }
+
+
 /* End Sittings */

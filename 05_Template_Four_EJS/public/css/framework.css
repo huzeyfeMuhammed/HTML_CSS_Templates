@@ -270,8 +270,13 @@
 .b-none {
   border: none;
 }
+
 .bb-solid {
   border-bottom: 1px solid var(--border-color);
+}
+
+.b-ccc {
+  border: 1px solid #ccc;
 }
 
 /* ======================================================
