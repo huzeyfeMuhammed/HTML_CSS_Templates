@@ -5,7 +5,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.get('/', (req, res) => res.render('index', { page: 'index' }));
-app.get('/sittings', (req, res) => res.render('sittings', { page: 'sittings' }));
+app.get('/settings', (req, res) => res.render('settings', { page: 'settings' }));
 app.get('/profile', (req, res) => res.render('profile', { page: 'profile' }));
 app.get('/projects', (req, res) => res.render('projects', { page: 'projects' }));
 app.get('/courses', (req, res) => res.render('courses', { page: 'courses' }));

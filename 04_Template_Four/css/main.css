@@ -668,13 +668,13 @@ a {
 }
 
 /* End Projects Table */
-/* Start Sittings */
-.sittings-page {
+/* Start Settings */
+.settings-page {
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 }
 
 @media (max-width: 767px) {
-  .sittings-page {
+  .settings-page {
     grid-template-columns: minmax(100px, 1fr);
     gap: 10px;
     margin-left: 10px;
@@ -682,7 +682,7 @@ a {
   }
 }
 
-.sittings-page .close-massage {
+.settings-page .close-massage {
   border: 1px solid #ccc;
   resize: none;
   min-height: 150px;
@@ -730,4 +730,4 @@ a {
   color: var(--blue-color);
   left: 50px;
 }
-/* End Sittings */
+/* End Settings */

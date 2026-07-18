@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include('partials/head', { title: 'Settings' }) %>
+  </head>
+  <body>
+    <div class="page d-flex">
+      <%- include('partials/sidebar', { page: 'settings' }) %>
+      <div class="content w-full">
+        <%- include('partials/header') %>
+        <h1 class="p-relative">Settings</h1>
+        <div class="settings-page m-20 d-grid gap-20">
+        <!-- Start Setting Box -->
+          <div class="dash-widget">
+            <h2>Site Control</h2>
+            <p>Control The Website If There Is Maintenance</p>
+            <div class="between-flex mb-15">
+              <div>
+                <span>Website Control </span>
+                <p class="c-grey fs-13 mt-5 mb-0">Open/Close Website And Type The Reason</p>
+              </div>
+              <div>
+                <label>
+                  <input class="toggle-checkbox" type="checkbox" checked />
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
+            </div>
+            <textarea
+              class="close-massage d-block p-10 rad-6 w-full"
+              placeholder="Close Massage Contenet"
+            ></textarea>
+          </div>
+        <!-- End Setting Box -->
+        
+        <!-- Start Setting Box -->
+          <div class="dash-widget">
+            <h2>General Info</h2>
+            <p>General Information About Your Account</p>
+            <div class="mb-15"> 
+            <label for="firstname" class="fs-14 d-block mb-10 c-grey">First Name</label>
+            <input type="text" id="firstname" class="b-none d-block p-10 rad-6 w-full b-ccc" placeholder="Firstname" /></div>
+            <div class="mb-15"> 
+            <label for="lastname" class="fs-14 d-block mb-10 c-grey">Last Name</label>
+            <input type="text" id="lastname" class="b-none d-block p-10 rad-6 w-full b-ccc" placeholder="Lastname" /></div>
+            <div> 
+            <label for="email" class="fs-14 d-block mb-10 c-grey">E-mail</label>
+            <input type="email" id="email" class="email b-none d-block p-10 mr-10 rad-6 w-full b-ccc" placeholder="Email"
+              value="user@example.com" disabled />
+            <a href="#" class="c-blue">Change</a>
+            </div>
+          </div>
+          <!-- End Setting Box -->
+          
+          <!-- Start Setting Box -->
+          <div class="dash-widget">
+            <h2>Security Info</h2>
+            <p>Security Information About Your Account</p>
+            <div class="security-box between-flex mb-15">
+              <div mb-15 bb-solid>
+                <span>Password
+                </span>
+                <p class="c-grey fs-13 mt-5 mb-0">Last Change On 25/06/2026</p>
+              </div>
+              <div>
+                <a href="#" class="btn-shape bg-blue c-white">Change</a>
+              </div>
+            </div>
+            <div class="between-flex mb-15">
+              <div>
+                <span>Two-Factor Authentication </span>
+                <p class="c-grey fs-13 mt-5 mb-0">Enable/Disable The Feature</p>
+              </div>
+              <div>
+                <label>
+                  <input class="toggle-checkbox" type="checkbox" checked />
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
+            </div>
+            <div class="between-flex mb-15">
+              <div>
+                <span>Devices </span>
+                <p class="c-grey fs-13 mt-5 mb-0">Check The Login Devices List</p>
+              </div>
+              <div>
+                <a href="#" class="btn-shape bg-eee c-black">Devices</a>
+
+              </div>
+              </div>
+              </div>
+              <!-- End Setting Box -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

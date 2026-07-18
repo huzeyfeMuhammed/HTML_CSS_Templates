@@ -256,6 +256,9 @@
 .bg-red {
   background-color: var(--red-color);
 }
+.bg-gry {
+  background-color: var(--grey-color);
+}
 
 /* ======================================================
   BORDERS
