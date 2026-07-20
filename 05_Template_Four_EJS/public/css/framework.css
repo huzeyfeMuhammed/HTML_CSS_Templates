@@ -134,7 +134,7 @@
   margin-bottom: 10px;
 }
 .mb-15 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .mb-20 {
@@ -256,9 +256,7 @@
 .bg-red {
   background-color: var(--red-color);
 }
-.bg-gry {
-  background-color: var(--grey-color);
-}
+
 
 /* ======================================================
   BORDERS
