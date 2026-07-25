@@ -43,6 +43,9 @@
   gap: 20px;
 }
 
+.bg-blue {
+  flex-direction: column;
+}
 /* Position */
 .p-relative {
   position: relative;

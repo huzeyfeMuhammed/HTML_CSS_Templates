@@ -20,7 +20,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
-  margin: 0;
+  /* margin: 0; */
 }
 /* Enable smooth scrolling for anchor links */
 html {
@@ -676,7 +676,7 @@ a {
   }
 }
 
-.settings-page .close-massage {
+.settings-page .close-message {
   border: 1px solid #ccc;
   resize: none;
   min-height: 150px;
@@ -731,5 +731,26 @@ width: calc(100% - 80px);
   left: 50px;
 }
 
+.settings-page .social-boxes i {
+  width: 40px;
+  height: 40px;
+  background-color: #f6f6f6;
+  border: 1px solid var(--border-color);
+  border-radius: 6px 0 0 6px;
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
 
+.settings-page .social-boxes input {
+  border-radius: 0 6px 6px 0;
+  background-color: #f6f6f6;
+
+}
+
+.settings-page .social-boxes>div:focus-within i {
+  color: black;
+}
 /* End Settings */

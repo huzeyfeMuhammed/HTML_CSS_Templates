@@ -10,13 +10,13 @@
         <%- include('partials/header') %>
         <h1 class="p-relative">Settings</h1>
         <div class="settings-page m-20 d-grid gap-20">
-        <!-- Start Setting Box -->
+          <!-- Start Setting Box: Site Control -->
           <div class="dash-widget">
             <h2>Site Control</h2>
             <p>Control The Website If There Is Maintenance</p>
             <div class="between-flex mb-15">
               <div>
-                <span>Website Control </span>
+                <span>Website Control</span>
                 <p class="c-grey fs-13 mt-5 mb-0">Open/Close Website And Type The Reason</p>
               </div>
               <div>
@@ -28,38 +28,41 @@
             </div>
             <textarea
               class="close-message d-block p-10 rad-6 w-full"
-              placeholder="Close message Contenet"
+              placeholder="Close message Content"
             ></textarea>
           </div>
-        <!-- End Setting Box -->
+          <!-- End Setting Box -->
         
-        <!-- Start Setting Box -->
+          <!-- Start Setting Box: General Info -->
           <div class="dash-widget">
             <h2>General Info</h2>
             <p>General Information About Your Account</p>
             <div class="mb-15"> 
-            <label for="firstname" class="fs-14 d-block mb-10 c-grey">First Name</label>
-            <input type="text" id="firstname" class="b-none d-block p-10 rad-6 w-full b-ccc" placeholder="Firstname" /></div>
+              <label for="firstname" class="fs-14 d-block mb-10 c-grey">First Name</label>
+              <input type="text" id="firstname" class="b-none d-block p-10 rad-6 w-full b-ccc" placeholder="Firstname" />
+              </div>
             <div class="mb-15"> 
-            <label for="lastname" class="fs-14 d-block mb-10 c-grey">Last Name</label>
-            <input type="text" id="lastname" class="b-none d-block p-10 rad-6 w-full b-ccc" placeholder="Lastname" /></div>
+              <label for="lastname" class="fs-14 d-block mb-10 c-grey">Last Name</label>
+              <input type="text" id="lastname" class="b-none d-block p-10 rad-6 w-full b-ccc" placeholder="Lastname" />
+              </div>
             <div> 
-            <label for="email" class="fs-14 d-block mb-10 c-grey">E-mail</label>
-            <input type="email" id="email" class="email b-none d-block p-10 mr-10 rad-6 w-full b-ccc" placeholder="Email"
-              value="user@example.com" disabled />
-            <a href="#" class="c-blue">Change</a>
-            </div>
+              <label for="email" class="fs-14 d-block mb-10 c-grey">E-mail</label>
+              <div class="d-flex align-center">
+                <input type="email" id="email" class="email b-none d-block p-10 mr-10 rad-6 w-full b-ccc" placeholder="Email"
+                  value="user@example.com" disabled />
+                <a href="#" class="c-blue">Change</a>
+                </div>
+                </div>
           </div>
-          <!-- End Setting Box -->
+          <!-- End Setting Box: General Info -->
           
-          <!-- Start Setting Box -->
+          <!-- Start Setting Box: Security Info -->
           <div class="dash-widget">
             <h2>Security Info</h2>
             <p>Security Information About Your Account</p>
             <div class="security-box between-flex mb-15 bb-solid pb-15">
-              <div class="mb-15">
-                <span>Password
-                </span>
+              <div>
+                <span>Password</span>
                 <p class="c-grey fs-13 mt-5 mb-0">Last Change On 25/06/2026</p>
               </div>
               <div>
@@ -68,7 +71,7 @@
             </div>
             <div class="security-box between-flex mb-15 bb-solid pb-15">
               <div>
-                <span>Two-Factor Authentication </span>
+                <span>Two-Factor Authentication</span>
                 <p class="c-grey fs-13 mt-5 mb-0">Enable/Disable The Feature</p>
               </div>
               <div>
@@ -80,27 +83,40 @@
             </div>
             <div class="security-box between-flex pb-15">
               <div>
-                <span>Devices </span>
+                <span>Devices</span>
                 <p class="c-grey fs-13 mt-5 mb-0">Check The Login Devices List</p>
               </div>
               <div>
                 <a href="#" class="btn-shape bg-eee c-black">Devices</a>
               </div>
             </div>
-            </div>
-              <!-- End Setting Box -->
+          </div>
+          <!-- End Setting Box: Security Info -->
             
-            <!-- Start Setting Box -->
-            <div class="dash-widget">
-              <h2>Social Info</h2>
-              <p>Social Media Information</p>
-              <div class="between-flex mb-15">
-                <div>
-                  <input type="text" class="b-none d-block p-10 mr-10 rad-6 w-full b-ccc" placeholder="Facebook" disabled />
-                </div>
+          <!-- Start Setting Box: Social Info  -->
+          <div class="social-boxes dash-widget">
+            <h2>Social Info</h2>
+            <p>Social Media Information</p>
+            <div class="d-flex align-center mb-15">
+              <i class="fa-brands fa-facebook-f center-flex c-grey"></i>
+              <input type="text" class="b-none d-block p-10 mr-10 w-full b-ccc" placeholder="Facebook Username" />
+            </div>
+            <div class="d-flex align-center mb-15">
+              <i class="fa-brands fa-twitter center-flex c-grey"></i>
+              <input type="text" class="b-none d-block p-10 mr-10 w-full b-ccc" placeholder="Twitter Username" />
+            </div>
+            <div class="d-flex align-center mb-15">
+              <i class="fa-brands fa-linkedin-in center-flex c-grey"></i>
+              <input type="text" class="b-none d-block p-10 mr-10 w-full b-ccc" placeholder="LinkedIn Username" />
+            </div>
+            <div class="d-flex align-center mb-15">
+              <i class="fa-brands fa-youtube center-flex c-grey"></i>
+              <input type="text" class="b-none d-block p-10 mr-10 w-full b-ccc" placeholder="YouTube Username" />
+            </div>
               </div>
-              </div>
-              <!-- End Setting Box -->
+            </div>
+              <!-- End Setting Box: Social Info -->
+
         </div>
       </div>
     </div>
