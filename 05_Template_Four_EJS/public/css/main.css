@@ -693,6 +693,15 @@ width: calc(100% - 80px);
   display: none;
 }
 
+.settings-page .social-boxes input {
+  border-radius: 0 6px 6px 0;
+  background-color: #f6f6f6;
+
+}
+
+.settings-page .social-boxes>div:focus-within i {
+  color: black;
+}
 .toggle-switch {
   background-color: #ccc;
   height: 32px;
@@ -744,13 +753,21 @@ width: calc(100% - 80px);
   transition: var(--main-transition);
 }
 
-.settings-page .social-boxes input {
-  border-radius: 0 6px 6px 0;
-  background-color: #f6f6f6;
+.settings-page :disabled {
+  cursor: no-drop;
+  color: #bbb;
+  background-color: #f0f4f8;
 
 }
 
 .settings-page .social-boxes>div:focus-within i {
   color: black;
+}
+.settings-page .buttoun {
+  transition: var(--main-transition);
+}
+
+.settings-page .buttoun:hover {
+  background-color: var(--blue-alt-color);
 }
 /* End Settings */
