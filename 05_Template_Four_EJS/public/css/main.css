@@ -1,4 +1,6 @@
-/* Define CSS variables for consistent theming */
+/* ==========================================================================
+   1) CSS Variables (Theme)
+   ========================================================================== */
 :root {
   --main-transition: 0.3s;
   --section-background: #ececec;
@@ -14,7 +16,9 @@
   --fa-font-solid: normal 900 1em / 1 var(--fa-family-classic);
   --fa-style-family-classic: var(--fa-family-classic);
 }
-/* Apply border-box model to all elements for predictable sizing */
+/* ==========================================================================
+   2) Global Reset & Base Rules
+   ========================================================================== */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -22,12 +26,11 @@
   padding: 0;
   /* margin: 0; */
 }
-/* Enable smooth scrolling for anchor links */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Set the default font for the entire document */
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -37,6 +40,15 @@ ul {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+:focus {
+  outline: none;
+}
+
+/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -48,19 +60,14 @@ ul {
 ::-webkit-scrollbar-thumb {
   background-color: var(--blue-color);
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--blue-alt-color);
 }
 
-a {
-  text-decoration: none;
-}
-
-:focus {
-  outline: none;
-}
-
-/* Define a reusable container class for centered content with padding */
+/* ==========================================================================
+   3) Container / Grid Helper
+   ========================================================================== */
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -68,38 +75,79 @@ a {
   margin-right: auto;
 }
 
-/* Responsive container width for small screens (tablets) */
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
 
-/* Responsive container width for medium screens (desktops) */
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
 
-/* Responsive container width for large screens (large desktops) */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
 }
-/* End Global Rules */
 
+.wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+
+/* ==========================================================================
+   4) Page Shell
+   ========================================================================== */
 .page {
   background-color: #f1f5f9;
   min-height: 100vh;
 }
 
-/* Start Sidebar */
+.page h1 {
+  margin: 20px 20px 40px;
+}
+
+.page h1::before,
+.page h1::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  bottom: -10px;
+  left: 0;
+}
+
+.page h1::before {
+  background-color: white;
+  width: 120px;
+}
+
+.page h1::after {
+  background-color: var(--grey-color);
+  width: 40px;
+}
+
+/* ==========================================================================
+   5) Sidebar Component
+   ========================================================================== */
 .sidebar {
   width: 250px;
   box-shadow: 0 0 10px #ddd;
 }
+
 @media (max-width: 767px) {
   .sidebar {
     width: 62px;
@@ -142,6 +190,7 @@ a {
     border: 5px solid white;
   }
 }
+
 .sidebar ul li a {
   transition: var(--main-transition);
   margin-bottom: 5px;
@@ -155,9 +204,10 @@ a {
 .sidebar ul li a span {
   margin-left: 10px;
 }
-/* End Sidebar */
 
-/* Start Content */
+/* ==========================================================================
+   6) Content / Header (Search + Icons)
+   ========================================================================== */
 .content {
   overflow: hidden;
 }
@@ -216,47 +266,9 @@ a {
   height: 32px;
 }
 
-.page h1 {
-  margin: 20px 20px 40px;
-}
-
-.page h1::before,
-.page h1::after {
-  position: absolute;
-  content: "";
-  height: 3px;
-  bottom: -10px;
-  left: 0;
-}
-
-.page h1::before {
-  background-color: white;
-  width: 120px;
-}
-
-.page h1::after {
-  background-color: var(--grey-color);
-  width: 40px;
-}
-/* End Content */
-
-.wrapper {
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 767px) {
-  .wrapper {
-    grid-template-columns: minmax(200px, 1fr);
-    margin-left: 10px;
-    margin-right: 10px;
-    gap: 10px;
-  }
-}
-
-/* Start Welcome Widget */
+/* ==========================================================================
+   7) Widget: Welcome
+   ========================================================================== */
 .welcome {
   overflow: hidden;
 }
@@ -308,10 +320,10 @@ a {
     margin-bottom: 20px;
   }
 }
-/* End Welcome Widget */
 
-/* Start Quick Draft Widget */
-
+/* ==========================================================================
+   8) Widget: Quick Draft
+   ========================================================================== */
 .quick-draft textarea {
   resize: none;
   min-height: 180px;
@@ -325,8 +337,9 @@ a {
 .quick-draft .save:hover {
   background-color: var(--blue-alt-color);
 }
-/* End Quick Draft Widget */
-/* Start Yearly Targets Widget */
+/* ==========================================================================
+   9) Widget: Yearly Targets
+   ========================================================================== */
 .targets .target-row .icon {
   width: 80px;
   height: 80px;
@@ -370,9 +383,11 @@ a {
 .targets .details .progress > .money span:after {
   border-top-color: var(--blue-color);
 }
+
 .targets .details .progress > .projects span:after {
   border-top-color: var(--orange-color);
 }
+
 .targets .details .progress > .team span:after {
   border-top-color: var(--green-color);
 }
@@ -381,16 +396,19 @@ a {
 .targets .money .progress {
   background-color: rgb(0 116 254 / 20%);
 }
+
 .targets .projects .icon,
 .targets .projects .progress {
   background-color: rgb(245 158 11 / 20%);
 }
+
 .targets .team .icon,
 .targets .team .progress {
   background-color: rgb(34 197 94 / 20%);
 }
-/* End Yearly Targets Widget */
-/* Start Ticket Widget */
+/* ==========================================================================
+   10) Widget: Tickets
+   ========================================================================== */
 .tickets .box {
   border: solid 1px var(--grey-color);
   width: calc(50% - 10px);
@@ -401,9 +419,10 @@ a {
     width: 100%;
   }
 }
-/* End Ticket Widget */
-/* Start Latest News Widget */
 
+/* ==========================================================================
+   11) Widget: Latest News
+   ========================================================================== */
 .latest-news .news-row:not(:last-of-type) {
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 20px;
@@ -428,8 +447,9 @@ a {
     width: fit-content;
   }
 }
-/* End Latest News Widget */
-/* Start Latest Tasks Widget */
+/* ==========================================================================
+   12) Widget: Latest Tasks
+   ========================================================================== */
 .tasks .delete {
   transition: var(--main-transition);
 }
@@ -450,14 +470,16 @@ a {
 .tasks .done p {
   text-decoration: line-through;
 }
-/* End Latest Tasks Widget */
-/* Start Latest Uploads */
+/* ==========================================================================
+   13) Widget: Latest Uploads
+   ========================================================================== */
 .latest-uploads ul li:not(:last-child) {
   border-bottom: 1px solid var(--border-color);
 }
-/* End Latest Uploads */
-/* Start Last Project */
 
+/* ==========================================================================
+   14) Widget: Last Project
+   ========================================================================== */
 .last-project img {
   width: 150px;
   position: absolute;
@@ -506,8 +528,9 @@ a {
     background-color: var(--blue-color);
   }
 }
-/* End Last Project */
-/* Start Reminders */
+/* ==========================================================================
+   15) Widget: Reminders
+   ========================================================================== */
 .reminders ul li div::before {
   position: absolute;
   content: "";
@@ -538,23 +561,27 @@ a {
 .reminders ul .green::after {
   background-color: var(--green-color);
 }
+
 .reminders ul .orange::before,
 .reminders ul .orange::after {
   background-color: var(--orange-color);
 }
+
 .reminders ul .blue::before,
 .reminders ul .blue::after {
   background-color: var(--blue-color);
 }
-/* End  Reminders */
-/* Start Latest Post */
+/* ==========================================================================
+   16) Widget: Latest Posts
+   ========================================================================== */
 .latest-posts .post {
   line-height: 1.8;
   text-transform: capitalize;
   min-height: 100px;
 }
-/* End Latest Post */
-/* End Social Media */
+/* ==========================================================================
+   17) Widget: Social Media
+   ========================================================================== */
 .social-media .box {
   padding-left: 70px;
 }
@@ -613,12 +640,13 @@ a {
   background-color: #0a66c2;
 }
 
-/* End Social Media */
-/* Start Projects Table */
-
+/* ==========================================================================
+   18) Widget: Projects Table
+   ========================================================================== */
 .projects .responsive-table {
   overflow-x: auto;
 }
+
 .projects .responsive-table table {
   min-width: 1000px;
   border-spacing: 0;
@@ -649,6 +677,7 @@ a {
   border-bottom: 1px solid #eee;
   border-left: 1px solid #eee;
 }
+
 .projects .responsive-table table tbody tr td:last-child {
   border-right: 1px solid #eee;
 }
@@ -661,8 +690,9 @@ a {
   font-size: 13px;
 }
 
-/* End Projects Table */
-/* Start Settings */
+/* ==========================================================================
+   19) Page: Settings
+   ========================================================================== */
 .settings-page {
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 }
@@ -683,25 +713,107 @@ a {
 }
 
 .settings-page .email {
-display: inline-flex;
-width: calc(100% - 80px);
+  display: inline-flex;
+    width: calc(100% - 80px);
 }
 
+.settings-page .social-boxes input {
+  height: 40px;
+  border-radius: 0 6px 6px 0;
+  background-color: #f6f6f6;
+}
+
+.settings-page .social-boxes i {
+  width: 40px;
+  height: 40px;
+  background-color: #f6f6f6;
+  border: 1px solid var(--border-color);
+  border-radius: 6px 0 0 6px;
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
+
+.settings-page .social-boxes>div:focus-within i {
+  color: black;
+}
+
+.settings-page :disabled {
+  cursor: no-drop;
+  color: #bbb;
+  background-color: #f0f4f8;
+}
+
+.settings-page .buttoun {
+  transition: var(--main-transition);
+}
+
+.settings-page .buttoun:hover {
+  background-color: var(--blue-alt-color);
+}
+
+/* --- Custom Checkbox Control --- */
 .toggle-checkbox {
   -webkit-appearance: none;
   appearance: none;
   display: none;
 }
 
-.settings-page .social-boxes input {
-  border-radius: 0 6px 6px 0;
-  background-color: #f6f6f6;
+.settings-page .control input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+.settings-page .control label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.settings-page .control label::before,
+.settings-page .control label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  border-radius: 4px;
 
 }
 
-.settings-page .social-boxes>div:focus-within i {
-  color: black;
+.settings-page .control label::before {
+  border: 2px solid var(--grey-color);
+  width: 14px;
+  height: 14px;
 }
+
+.settings-page .control label::after {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00c";
+  font-weight: 900;
+  background-color: var(--blue-color);
+  color: white;
+  font-size: 14px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+  transform: scale(0) rotate(360deg);
+}
+
+.settings-page .control input[type="checkbox"]:checked+label::after {
+  transform: scale(1);
+}
+
+.settings-page .control label:hover::before {
+  border-color: var(--blue-alt-color);
+}
+/* --- Custom Toggle Switch --- */
 .toggle-switch {
   background-color: #ccc;
   height: 32px;
@@ -739,35 +851,3 @@ width: calc(100% - 80px);
   color: var(--blue-color);
   left: 50px;
 }
-
-.settings-page .social-boxes i {
-  width: 40px;
-  height: 40px;
-  background-color: #f6f6f6;
-  border: 1px solid var(--border-color);
-  border-radius: 6px 0 0 6px;
-  border-right: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: var(--main-transition);
-}
-
-.settings-page :disabled {
-  cursor: no-drop;
-  color: #bbb;
-  background-color: #f0f4f8;
-
-}
-
-.settings-page .social-boxes>div:focus-within i {
-  color: black;
-}
-.settings-page .buttoun {
-  transition: var(--main-transition);
-}
-
-.settings-page .buttoun:hover {
-  background-color: var(--blue-alt-color);
-}
-/* End Settings */
