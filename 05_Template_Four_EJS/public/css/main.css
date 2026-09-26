@@ -813,6 +813,86 @@ a {
 .settings-page .control label:hover::before {
   border-color: var(--blue-alt-color);
 }
+/* --- Backup Manager --- */
+.settings-page input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+.settings-page .date label {
+  padding-left: 50px;
+  cursor: pointer;
+  position: relative;
+  font-size: 20px;
+}
+
+.settings-page .date label::before,
+.settings-page .date label::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.settings-page .date label::before {
+  border: 2px solid var(--grey-color);
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.settings-page .date label::after {
+  width: 14px;
+  height: 14px;
+  background-color: var(--blue-color);
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  transition: var(--main-transition);
+}
+
+.settings-page .date input[type="radio"]:checked+label::before {
+  border-color: var(--blue-color);
+}
+
+.settings-page .date input[type="radio"]:checked+label::after {
+  transform: translateY(-50%) scale(1);
+}
+
+.settings-page .date label:hover::before {
+  border-color: var(--blue-alt-color);
+}
+
+.settings-page .servers {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .settings-page .servers {
+    flex-wrap: wrap;
+  }
+}
+
+.settings-page .servers .server {
+  border: 1px solid #ddd;
+}
+
+.settings-page .servers .server label {
+  cursor: pointer;
+}
+
+.settings-page .servers .server i {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.settings-page .servers input[type="radio"]:checked+.server {
+  border-color: var(--blue-color);
+  color: var(--blue-color);
+}
 /* --- Custom Toggle Switch --- */
 .toggle-switch {
   background-color: #ccc;
@@ -851,3 +931,6 @@ a {
   color: var(--blue-color);
   left: 50px;
 }
+/* ==========================================================================
+   20) Page: Profile
+   ========================================================================== */
