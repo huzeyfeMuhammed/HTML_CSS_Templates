@@ -113,6 +113,9 @@
 }
 
 /* Margin */
+.m-0 {
+  margin: 0;
+}
 .m-15 {
   margin: 15px;
 }
@@ -281,6 +284,9 @@
   border-radius: 10px;
 }
 
+.rad-half {
+  border-radius: 50%;
+}
 .b-none {
   border: none;
 }

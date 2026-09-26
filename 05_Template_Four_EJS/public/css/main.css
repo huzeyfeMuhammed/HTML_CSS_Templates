@@ -934,3 +934,41 @@ a {
 /* ==========================================================================
    20) Page: Profile
    ========================================================================== */
+@media (max-width:767px) {
+  .profile-page .overview {
+    flex-direction: column;
+  }
+
+}
+
+.profile-page .avatar-box {
+  width: 300px;
+}
+
+@media (min-width:768px) {
+  .profile-page .avatar-box {
+    border-right: solid 2px #eee;
+  }
+}
+
+.profile-page .avatar-box>img {
+  width: 120px;
+  height: 120px;
+}
+
+.profile-page .avatar-box .level {
+  height: 20px;
+  margin: auto;
+  background-color: #ccc;
+  padding-top: 15px;
+
+}
+
+.profile-page .avatar-box .level span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 10px;
+  background-color: var(--blue-color);
+}
