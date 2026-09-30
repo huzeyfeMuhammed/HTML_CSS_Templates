@@ -972,3 +972,120 @@ a {
   border-radius: 10px;
   background-color: var(--blue-color);
 }
+
+.profile-page .overview .info-box .box {
+flex-wrap: wrap;
+border-bottom: 1px solid #eee;
+transition: var(--main-transition);
+}
+
+.profile-page .overview .info-box .box:hover {
+background-color: #f6f6f6;
+}
+
+.profile-page .overview .info-box .box > div {
+min-width: 250px;
+padding: 10px 0 0;
+}
+
+  .profile-page .overview .info-box .box .toggle-switch {
+height: 20px; }
+
+.profile-page .info-box .toggle-switch::before {
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+}
+.profile-page .info-box .toggle-checkbox:checked + .toggle-switch::before {
+  left: 62px;}
+
+  
+@media (max-width: 767px) {
+.profile-page .avatar-box {
+  width: 100%;
+  max-width: 300px;
+  }
+  .profile-page .overview .info-box .box > div {
+  width: 100%;
+  min-width: 0; 
+  }
+
+  .profile-page .info-box .toggle-switch {
+  margin: auto;
+}
+}
+
+.profile-page .skills-card {
+  flex-grow: 1;
+}
+
+.profile-page .skills-card ul li {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-page .skills-card ul li:last-child {
+  border-bottom: 0;
+}
+
+.profile-page .skills-card ul li > span {
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 0 5px;
+
+}
+
+.profile-page .activities {
+  flex-grow: 2;
+}
+
+.profile-page .other-data .activities .activity:not(:last-child) {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-page .activities .activity img {
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .profile-page .other-data {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-page .other-data .skills-card,
+  .profile-page .other-data .activities {
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile-page .other-data .activities .activity {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-page .activities .activity img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .profile-page .activities .activity .date {
+    margin-top: 15px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .profile-page .activities .activity .date {
+    margin-left: auto;
+    text-align: right;
+  }
+}
