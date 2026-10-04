@@ -132,6 +132,9 @@
 .mt-10 {
   margin-top: 10px;
 }
+.mt-15 {
+  margin-top: 15px;
+}
 .mt-20 {
   margin-top: 20px;
 }
@@ -300,6 +303,10 @@
 
 .b-ccc {
   border: 1px solid #ccc;
+}
+
+.bt-eee {
+  border-top: 1px solid #ccc;
 }
 
 /* ======================================================
