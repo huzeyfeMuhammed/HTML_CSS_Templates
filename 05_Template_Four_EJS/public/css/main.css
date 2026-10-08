@@ -1210,7 +1210,7 @@ height: 20px; }
   }
 }
 /* ==========================================================================
-   22) Courses: Projects
+   22) Page: Courses
    ========================================================================== */
 .courses-page {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -1248,6 +1248,60 @@ border: 2px solid white;
   /* Mobile */
 @media (max-width: 767px) {
 .courses-page {
+    grid-template-columns: minmax(200px, 1fr);
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+}
+/* ==========================================================================
+   22) Page: Friends
+   ========================================================================== */
+.friends-page {
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+}
+
+.friends-page .contact {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.friends-page .contact i {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 50%;
+    color: #666;
+    font-size: 13px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.friends-page .contact i:hover {
+    background-color: var(--blue-color);
+    color: white;
+}
+
+.friends-page .icons .vip {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 10px;
+    font-size: 40px;
+    opacity: 0.2;
+
+}
+
+.friends-page .contact i {
+background-color: #eee;
+border-radius: 50%;
+height: 32px;
+width: 32px;
+}
+
+  /* Mobile */
+@media (max-width: 767px) {
+.friends-page {
     grid-template-columns: minmax(200px, 1fr);
     gap: 10px;
     margin-left: 10px;
